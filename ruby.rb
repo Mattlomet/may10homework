@@ -1,32 +1,32 @@
-class Calc
+# class Calc
 
-	def initialize (num1,num2)
-		@num1 = num1
-		@num2 = num2
-	end
+# 	def initialize (num1,num2)
+# 		@num1 = num1
+# 		@num2 = num2
+# 	end
 
-	def add
-		added = (@num1 + @num2)
-		puts added
-	end
+# 	def add
+# 		added = (@num1 + @num2)
+# 		puts added
+# 	end
 
-	def subtract
-		subbed = (@num1 - @num2)
-		puts subbed
-	end
+# 	def subtract
+# 		subbed = (@num1 - @num2)
+# 		puts subbed
+# 	end
 
-	def divide
-		divided = (@num1 / @num2)
-		puts divided
-	end
+# 	def divide
+# 		divided = (@num1 / @num2)
+# 		puts divided
+# 	end
 
-	def multiply
-		multiplied = (@num1 * @num2)
-		puts multiplied
-	end
+# 	def multiply
+# 		multiplied = (@num1 * @num2)
+# 		puts multiplied
+# 	end
 
+# end
 
-end
 
 
 class Elevator
@@ -41,26 +41,26 @@ class Elevator
 
 	def go_up
 
-		if @floor === @top_floor
+		if @floor == @top_floor
 			puts "your on the top floor"
 		else
-		@floor = @floor[0]+1
-		cheery_greating
+		@floor = @floor+1
+		cheery_greeting
 		end
 
 	end
 
 	def go_down
 
-		if @floor === @bottom_floor
+		if @floor == @bottom_floor
 			puts "your on the bottom floor"
 		else
-		@floor = @floor[0]-1
-		cheery_greating
+		@floor = @floor-1
+		cheery_greeting
 		end	
 	end
 
-	def cheery_greating
+	def cheery_greeting
 
 		current_floor = @floor
 		current_string = current_floor.to_s		
@@ -70,3 +70,7 @@ class Elevator
 	end
 
 end
+
+elev = Elevator.new
+p elev.go_up
+p elev.go_up
